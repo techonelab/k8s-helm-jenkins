@@ -29,7 +29,7 @@ what is this for:
 	- add the stable(archived) repo `helm repo add stable https://charts.helm.sh/stable` (had to add archive repo stable to use old jenkins chart, for some reason, I haven't done RCA why on kind cluster installing jenkins using latest helm chart restarts pod without relevant error message)
 - to update helm repository `help repo update`
 - search jenkins chart `helm search hub jenkins`
-- install jenkins chart `helm install jenkins-ci --set master.adminPassword=anystrongpasswordyouwanthere,master.serviceType=NodePort #reponame#/jenkins` visit helm documentation for more info.
+- install jenkins chart `helm install jenkins-ci --set master.adminPassword=anystrongpasswordyouwanthere,master.serviceType=LoadBalancer #reponame#/jenkins` visit helm documentation for more info, e.g: change serviceType to NodePort if want to test locally, you may notice as well parameter master is no longer use on latest jenkins but controller instead.
 - (optional) on jenkins-ci service set externalTrafficPolicy to `local`
 - a jenkinsfile
 - plugins: any desired or needed plugin for your CICD, e.g: blue ocean
