@@ -2,7 +2,7 @@ TEST your cicd on your own lightweight k8s cluster before implementing to your p
 
 what you need:
 
-- k8s cluster (for testing purpose I use kind)
+\- k8s cluster (for testing purpose I use kind)
 - kubectl
 - docker
 - helm
